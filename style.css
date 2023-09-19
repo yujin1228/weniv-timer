@@ -1,0 +1,109 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+body {
+    background-image: linear-gradient(90deg,#F0F4FF,#A5B6EE);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Pretendard,'Noto Sans KR', sans-serif;
+}
+
+.container {
+    width: fit-content;
+    text-align: center;
+}
+
+.weniv-logo {
+    width: 244px;
+    margin-bottom: 60px;
+}
+
+.timer {
+    width: 400px;
+    height: 360px;
+    border-radius: 16px;
+    background-image: linear-gradient(135deg,#5572BB 45%,#374B7C);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 40px 44px;
+}
+
+.timer__title {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #3D538A;
+}
+/*====== 타이머 ======*/
+.timer__time {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding-top: 32px;
+    margin-bottom: 40px;
+    border-top: 1px solid #5B75B4;
+    
+}
+
+.timer__time span {
+    color: #A5B6EE;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.timer__time div {
+   font-size: 40px;
+   color: var(--white);
+   font-weight: 700;
+   border: 1px solid #354971;
+   border-radius: 4px;
+   background-image: linear-gradient(-45deg,#304577,#4C65A0);
+   padding: 16px 14px;
+   position: relative;
+}
+
+.timer__time__min div::before,
+.timer__time__sec div::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: url(./img/dot.svg) no-repeat 0px 0px;
+    width: 6px;
+    height: 26px;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+
+
+
+/*====== 버튼 ======*/
+.timer__btn {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.timer__btn__start,.timer__btn__reset{
+    font-size: 14px;
+    font-weight: 700;
+    color: #617199;
+    border-radius: 50px;
+    background-color: #324577;
+    padding: 16px 23px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/*====== 카피라이트 ======*/
+.copy-right {
+    color: #8596BF;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 60px;
+}
+

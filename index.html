@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="a11y-hidden">위니브 타이머</h1>
+        <img class="weniv-logo" src="./img/weniv-logo.svg">
+        <section class="timer">
+            <h2 class="timer__title">TIMER</h2>
+            <ul class="timer__time">
+               <li class="timer__time__hrs">
+                    <span>HRS</span>
+                    <div>00</div>
+                </li> 
+               <li class="timer__time__min">
+                <span>MIN</span>
+                <div>00</div>
+               </li> 
+               <li class="timer__time__sec">
+                    <span>SEC</span>
+                    <div>00</div>
+               </li> 
+            </ul>
+            <section class="timer__btn">
+                <button class="timer__btn__start">
+                    <img src="./img/icon/icon-start-disabled.svg">
+                    <span>START</span>
+                </button>
+                <button class="timer__btn__reset">
+                    <img src="./img/icon/icon-reset-disabled.svg">
+                    <span>RESET</span>
+                </button>
+            </section>
+        </section>
+        <p class="copy-right">ⓒ WENIV CORP.</p>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
