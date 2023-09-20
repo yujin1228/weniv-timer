@@ -3,13 +3,15 @@
 body {
     background-image: linear-gradient(90deg,#F0F4FF,#A5B6EE);
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Pretendard,'Noto Sans KR', sans-serif;
+    position: relative;
 }
 
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: fit-content;
     text-align: center;
 }
@@ -53,14 +55,12 @@ body {
 }
 
 .timer__time div {
-   font-size: 40px;
-   color: var(--white);
-   font-weight: 700;
    border: 1px solid #354971;
    border-radius: 4px;
    background-image: linear-gradient(-45deg,#304577,#4C65A0);
    padding: 16px 14px;
    position: relative;
+   margin-top: 4px;
 }
 
 .timer__time__min div::before,
@@ -76,8 +76,35 @@ body {
     transform: translateY(-50%);
 }
 
+.timer__time div span {
+    font-size: 40px;
+    color: var(--white);
+    font-weight: 700;
+}
 
+.timer__time div span::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #354971;
+}
 
+.timer__time div span::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #354971;
+}
 
 /*====== 버튼 ======*/
 .timer__btn {
@@ -86,16 +113,62 @@ body {
     gap: 12px;
 }
 
-.timer__btn__start,.timer__btn__reset{
+.timer__btn button {
     font-size: 14px;
     font-weight: 700;
-    color: #617199;
+    color: var(--white);
     border-radius: 50px;
-    background-color: #324577;
     padding: 16px 23px;
     display: flex;
     align-items: center;
-    gap: 5px;
+}
+
+.timer__btn__left {
+    background-color: #5180FF;
+}
+
+.timer__btn__right {
+    background-color: #FB7099;
+}
+
+.timer__btn__left::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./img/icon/icon-reset.svg) no-repeat 0px 0px;
+    margin-right: 5px;
+}
+
+.timer__btn__right::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./img/icon/icon-start.svg) no-repeat 0px 0px;
+    margin-right: 5px;
+}
+
+.timer__btn__left.disabled,
+.timer__btn__right.disabled {
+    color: #617199;
+    background-color: #324577;
+}
+
+.timer__btn__left.disabled::before {
+    background: url(./img/icon/icon-start-disabled.svg) no-repeat 0px 0px;
+}
+
+.timer__btn__right.disabled::before {
+    background: url(./img/icon/icon-reset-disabled.svg) no-repeat 0px 0px;
+}
+
+.timer__btn__left.paused {
+    background-color: #15C2B8;
+}
+
+.timer__btn__left.paused::before {
+    background: url(./img/icon/icon-stop.svg) no-repeat 0px 0px;
 }
 
 
