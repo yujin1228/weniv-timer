@@ -136,7 +136,7 @@ body {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url(./img/icon/icon-reset.svg) no-repeat 0px 0px;
+    background: url(./img/icon/icon-start.svg) no-repeat 0px 0px;
     margin-right: 5px;
 }
 
@@ -145,7 +145,7 @@ body {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: url(./img/icon/icon-start.svg) no-repeat 0px 0px;
+    background: url(./img/icon/icon-reset.svg) no-repeat 0px 0px;
     margin-right: 5px;
 }
 
